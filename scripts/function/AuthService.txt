@@ -1,0 +1,131 @@
+async updatePassword(
+        ...param: Parameters<typeof LINEStruct.updatePassword_args>
+    ): Promise<LINETypes.updatePassword_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.updatePassword_args(...param),
+            "updatePassword",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async establishE2EESession(
+        ...param: Parameters<typeof LINEStruct.establishE2EESession_args>
+    ): Promise<LINETypes.establishE2EESession_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.establishE2EESession_args(...param),
+            "establishE2EESession",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async issueTokenForAccountMigrationSettings(
+        ...param: Parameters<typeof LINEStruct.issueTokenForAccountMigrationSettings_args>
+    ): Promise<LINETypes.issueTokenForAccountMigrationSettings_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.issueTokenForAccountMigrationSettings_args(...param),
+            "issueTokenForAccountMigrationSettings",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async openAuthSession(
+        ...param: Parameters<typeof LINEStruct.openAuthSession_args>
+    ): Promise<LINETypes.openAuthSession_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.openAuthSession_args(...param),
+            "openAuthSession",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async getAuthRSAKey(
+        ...param: Parameters<typeof LINEStruct.getAuthRSAKey_args>
+    ): Promise<LINETypes.getAuthRSAKey_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.getAuthRSAKey_args(...param),
+            "getAuthRSAKey",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async setIdentifier(
+        ...param: Parameters<typeof LINEStruct.setIdentifier_args>
+    ): Promise<LINETypes.setIdentifier_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.setIdentifier_args(...param),
+            "setIdentifier",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async updateIdentifier(
+        ...param: Parameters<typeof LINEStruct.updateIdentifier_args>
+    ): Promise<LINETypes.updateIdentifier_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.updateIdentifier_args(...param),
+            "updateIdentifier",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async resendIdentifierConfirmation(
+        ...param: Parameters<typeof LINEStruct.resendIdentifierConfirmation_args>
+    ): Promise<LINETypes.resendIdentifierConfirmation_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.resendIdentifierConfirmation_args(...param),
+            "resendIdentifierConfirmation",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async confirmIdentifier(
+        ...param: Parameters<typeof LINEStruct.confirmIdentifier_args>
+    ): Promise<LINETypes.confirmIdentifier_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.confirmIdentifier_args(...param),
+            "confirmIdentifier",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async removeIdentifier(
+        ...param: Parameters<typeof LINEStruct.removeIdentifier_args>
+    ): Promise<LINETypes.removeIdentifier_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.removeIdentifier_args(...param),
+            "removeIdentifier",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }
+
+async issueV3TokenForPrimary(
+        ...param: Parameters<typeof LINEStruct.issueV3TokenForPrimary_args>
+    ): Promise<LINETypes.issueV3TokenForPrimary_result["success"]> {
+        return await this.client.request.request(
+            LINEStruct.issueV3TokenForPrimary_args(...param),
+            "issueV3TokenForPrimary",
+            this.protocolType,
+            true,
+            this.requestPath,
+        );
+    }

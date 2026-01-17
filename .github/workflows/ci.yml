@@ -1,0 +1,45 @@
+name: ci
+on:
+  pull_request:
+    branches: ["*"]
+    paths-ignore:
+      - "docs/**"
+      - ".vscode/**"
+      - "README.md"
+      - ".gitignore"
+      - "LICENSE"
+  push:
+
+jobs:
+  jsr-dry-run:
+    name: "Checking if it's valid for JSR"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v2.x
+      - run: deno publish --dry-run
+        working-directory: ./packages/linejs
+      - run: deno publish --dry-run
+        working-directory: ./packages/types
+
+  deno:
+    name: "Testing"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v2.x
+      - run: deno test
+
+#  format:
+#    name: "Format Check"
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: denoland/setup-deno@v1
+#        with:
+#          deno-version: v2.x
+#      - run: deno fmt --check

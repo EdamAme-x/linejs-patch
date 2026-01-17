@@ -1,0 +1,6 @@
+.DS_Store
+sandbox
+.env
+node_modules
+deno.lock
+docs/vitepress/cache
